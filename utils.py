@@ -17,14 +17,14 @@ async def get_chars() -> dict[str, dict]:
     num_of_char = random.randint(1, 9)
     indexs = [random.randint(1, 49) for _ in range(num_of_char)]
     output_chars = {characters[i][0]: characters[i][1] for i in indexs}
-    return {"Characters": output_chars}
+    return {"characters": output_chars}
 
 
-async def get_places() -> dict[str, str]:
+async def get_places() -> dict[str, dict]:
     num_of_place = random.randint(1, 5)
     indexs = [random.randint(1, 49) for _ in range(num_of_place)]
     output_places = {places[i][0]: places[i][1] for i in indexs}
-    return {"Places": json.dumps(output_places)}
+    return {"places": output_places}
 
 
 async def get_summary(text: str) -> dict[str, str]:
