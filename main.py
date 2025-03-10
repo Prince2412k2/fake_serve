@@ -89,6 +89,7 @@ async def instruct_response(
     input_tokens = count_tokens(prompt)
     output_tokens = count_tokens(summary["summary"])
     merged_output = {**summary, **characters, **places}
+    time.sleep(2)
     return SummaryResponseSchema(
         model=model,
         choices=[
